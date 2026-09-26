@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تاجر برو • TAGER PRO - برنامج إدارة المحلات ونقاط البيع والمخازن</title>
+  <meta name="description" content="برنامج تاجر برو لإدارة المحلات والأنشطة التجارية، كاشير سريع، طباعة فواتير، قارئ باركود، جرد المخزن، وحسابات الديون للكمبيوتر والموبايل.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <img src="assets/logo.png" alt="تاجر برو" class="brand-logo">
+        <div class="brand-titles">
+          <span class="brand-title">تاجر برو <span style="color: var(--cyan-primary);">PRO</span></span>
+          <span class="brand-tag">إدارة المحلات ونقاط البيع</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+        <li><a href="#showcase" class="nav-link">صور البرنامج</a></li>
+        <li><a href="#features" class="nav-link">المميزات</a></li>
+        <li><a href="#pricing" class="nav-link">الأسعار والاشتراكات</a></li>
+        <li><a href="#downloads" class="nav-link">تحميل البرنامج</a></li>
+        <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-btn-account" id="nav-account-btn" type="button" onclick="showAuthModal('login')">
+          <i class="fa-solid fa-user"></i>
+          <span>دخول / حساب جديد</span>
+        </button>
+        <a href="#downloads" class="nav-btn-download">
+          <i class="fa-solid fa-download"></i>
+          <span>تحميل مجاني</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle-btn" type="button" aria-label="القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-content">
+      <div class="hero-pill">
+        <span class="live-dot"></span>
+        <span class="hero-pill-text">النسخة الرسمية المحدثة • كمبيوتر وموبايل</span>
+      </div>
+
+      <h1 class="hero-title">
+        البرنامج الأسهل والأسرع لإدارة <br>
+        <span class="gradient-text">محلك ومبيعاتك ومخزنك وفواتيرك</span>
+      </h1>
+
+      <p class="hero-desc">
+        نظام <strong>تاجر برو (TAGER PRO)</strong> مصمم خصيصاً لأصحاب المحلات والأنشطة التجارية في مصر والعالم العربي؛ كاشير سريع يدعم أجهزة الباركود، إدخال فوري بدون ماوس، طباعة فواتير حرارية وإرسالها واتساب للزبائن، مع ربط مباشر بين الكمبيوتر والموبايل لمتابعة شغلك أينما كنت.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="TAGER_PRO_Setup.exe" class="btn-primary-hero btn-download-pc" download>
+          <i class="fa-brands fa-windows btn-icon"></i>
+          <span>تحميل نسخة الكمبيوتر</span>
+          <span class="btn-badge pc-version-val">v1.0.0</span>
+        </a>
+
+        <a href="TAGER_PRO.apk" class="btn-secondary-hero btn-download-android" download>
+          <i class="fa-brands fa-android btn-icon" style="color: var(--green-online);"></i>
+          <span>تحميل تطبيق الموبايل</span>
+          <span class="btn-badge android-version-val">v1.0.0</span>
+        </a>
+      </div>
+
+      <div class="hero-compatibility">
+        <div class="comp-item">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>متوافق مع جميع أجهزة وإصدارات الويندوز (Windows)</span>
+        </div>
+        <div class="comp-item">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>متوافق مع جميع هواتف الأندرويد (Android)</span>
+        </div>
+        <div class="comp-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>بياناتك محفوظة ومحمية بدون أي قلق من فقدانها</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. STATS STRIP
+       ========================================== -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">سرعة فائقة</div>
+          <div class="stat-label">إصدار الفاتورة بالباركود في أقل من 3 ثواني</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">غير محدود</div>
+          <div class="stat-label">سعة مفتوحة للمنتجات والفواتير والمبيعات</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">ربط فوري</div>
+          <div class="stat-label">بين جهاز الكاشير في المحل وهاتفك المحمول</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">أمان كامل</div>
+          <div class="stat-label">حفظ تلقائي مع إمكانية استخراج كشوفات PDF</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. SYSTEM SHOWCASE / REAL SCREENSHOTS
+       ========================================== -->
+  <section class="showcase-section" id="showcase">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-images"></i> صور حية من داخل البرنامج</span>
+        <h2 class="section-title">شاشات واضحة وسهلة <span class="gradient-text">تنجز عملك بدون تعقيد</span></h2>
+        <p class="section-subtitle">شاهد صور حقيقية لبرنامج الكمبيوتر وتطبيق الموبايل ونماذج الفواتير الرسمية.</p>
+      </div>
+
+      <div class="showcase-nav">
+        <button class="showcase-tab-btn active" type="button" data-tab="pc">
+          <i class="fa-solid fa-desktop"></i> شاشة الكمبيوتر والكاشير
+        </button>
+        <button class="showcase-tab-btn" type="button" data-tab="mobile">
+          <i class="fa-solid fa-mobile-screen"></i> تطبيق الهاتف والمتابعة
+        </button>
+        <button class="showcase-tab-btn" type="button" data-tab="invoice">
+          <i class="fa-solid fa-receipt"></i> الفواتير والطباعة وواتساب
+        </button>
+        <button class="showcase-tab-btn" type="button" data-tab="inventory">
+          <i class="fa-solid fa-boxes-stacked"></i> المخزن والنواقص السريعة
+        </button>
+      </div>
+
+      <div class="showcase-display">
+        <div class="display-header">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <div class="window-title">
+            <i class="fa-solid fa-store"></i>
+            <span id="showcase-header-title">نظام الكاشير ونقطة البيع لبرنامج الكمبيوتر</span>
+          </div>
+          <div></div>
+        </div>
+
+        <div class="showcase-content-box" style="padding: 24px;">
+          <!-- Visual Media Container -->
+          <div class="mockup-grid">
+            <div class="mockup-info">
+              <h3 id="mockup-title">نقطة بيع سريعة تدعم قارئ الباركود والطابعات</h3>
+              <p id="mockup-desc">
+                شاشة كاشير عملية جداً تتيح لك البيع بالباركود أو البحث السريع باسم السلعة، حساب الخصم والإجمالي بضغطة واحدة، وطباعة فواتير حرارية وإرسالها فوراً لواتساب العميل.
+              </p>
+              <div class="mockup-features" id="mockup-features-list">
+                <div class="mockup-feat-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>تنقل فوري بزر Enter في لوحة المفاتيح لإدخال المنتجات بدون لمس الماوس</span>
+                </div>
+                <div class="mockup-feat-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>تنبيه موحد ذكي يوضح عدد النواقص الإجمالي بدون إزعاج متكرر</span>
+                </div>
+                <div class="mockup-feat-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>قسم مخصص للإيرادات والخدمات المستقلة غير المأخوذة من المخزن</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image Showcase Wrapper -->
+            <div class="mockup-preview-card" style="padding: 12px; text-align: center;">
+              <img id="mockup-main-image" src="assets/pc_mockup.jpg" alt="شاشة برنامج تاجر برو" style="width: 100%; max-height: 420px; object-fit: cover; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+              <div style="margin-top: 10px; color: var(--text-muted); font-size: 0.85rem; font-weight: 600;" id="mockup-image-caption">
+                شاشة المبيعات والكاشير وقراءة الباركود المتصلة بطابعة الفواتير
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. CORE FEATURES SECTION
+       ========================================== -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-star"></i> أهم المميزات</span>
+        <h2 class="section-title">صُمم ليريحك ويوفر وقتك <span class="gradient-text">في كل تفصيلة</span></h2>
+        <p class="section-subtitle">حلول عملية ومجربة تضمن لك دقة الحسابات، سرعة خدمة الزبائن، والتحكم الكامل في تجارتك.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feat-icon-wrapper">
+            <i class="fa-solid fa-keyboard"></i>
+          </div>
+          <h3 class="feature-title">إدخال بضاعة سريع بدون ماوس (Enter)</h3>
+          <p class="feature-desc">
+            في نسخة الكمبيوتر، ينتقل المؤشر تلقائياً بزر Enter من اسم المنتج إلى سعر الشراء، ثم سعر البيع قطاعي، وجملة، والكمية، ثم حفظ الصنف والعودة فوراً لإدخال الصنف التالي دون لمس الفأرة.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feat-icon-wrapper">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <h3 class="feature-title">تنبيه ذكي بعدد النواقص</h3>
+          <p class="feature-desc">
+            بدل إغراق الشاشة بعشرات التنبيهات المنفصلة، يجمع البرنامج جميع النواقص في تنبيه واحد أنيق يخبرك بعدد المنتجات التي قاربت على النفاد لتقوم بطلبها فوراً.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feat-icon-wrapper">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3 class="feature-title">قسم مستقل للإيرادات والخدمات</h3>
+          <p class="feature-desc">
+            إذا قمت بعمل خدمة صيانة، توصيل، أو أي دخل خارج بضاعة المخزن، يمكنك تسجيله في قسم الإيرادات ليدخل في حساب أرباحك مع إمكانية طباعة تقرير PDF شامل بدون فواتير.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feat-icon-wrapper">
+            <i class="fa-solid fa-receipt"></i>
+          </div>
+          <h3 class="feature-title">فواتير احترافية ومشاركة واتساب</h3>
+          <p class="feature-desc">
+            طباعة فواتير حرارية (80 مم و 58 مم) وفواتير A4 واضحة بألوان متناسقة، مع إمكانية إرسال نص الفاتورة وصورتها مباشرة لرقم واتساب العميل بنقرة واحدة.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feat-icon-wrapper">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <h3 class="feature-title">دفتر الديون وحسابات الزبائن والموردين</h3>
+          <p class="feature-desc">
+            تسجيل المبيعات الآجلة، دفعات السداد النقدية، وإجمالي المتبقي على كل عميل مع كشف حساب مفصل بصيغة PDF يوضح تاريخ كل عملية وتفاصيلها.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feat-icon-wrapper">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3 class="feature-title">ربط فوري بين الكمبيوتر والموبايل</h3>
+          <p class="feature-desc">
+            شغل محلك من جهاز الكمبيوتر وتابع المبيعات والأرباح من هاتفك في أي وقت ومكان، مع بقاء بياناتك آمنة ومحفوظة بالكامل دون أي خوف من ضياعها.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. PRICING & SUBSCRIPTIONS SECTION (EXACT PROGRAM PRICES)
+       ========================================== -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-tag"></i> الأسعار والباقات الرسمية</span>
+        <h2 class="section-title">نفس باقات وأسعار البرنامج <span class="gold-gradient-text">بدون أي زيادة</span></h2>
+        <p class="section-subtitle">ابدأ مجاناً وجرب كافة المزايا، أو اختر مدة اشتراك VIP المناسبة لك واستمتع بكافة الخصومات.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Free Plan -->
+        <div class="pricing-card">
+          <h3 class="plan-name">الباقة الأساسية</h3>
+          <p class="plan-desc">مناسبة للبدء وتجربة مميزات البرنامج الأساسية.</p>
+          <div class="plan-price-box">
+            <span class="price-val">مجاناً</span>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>فواتير ومبيعات غير محدودة</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>المخزن الرئيسي والباركود</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>تقارير المبيعات اليومية</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>طباعة فواتير أساسية</span></div>
+          </div>
+          <button class="btn-plan btn-plan-outline" type="button" onclick="showAuthModal('register')">تسجيل حساب مجاني</button>
+        </div>
+
+        <!-- 1 Month VIP -->
+        <div class="pricing-card">
+          <div class="featured-badge" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); color: #fff;">🔥 عرض البداية</div>
+          <h3 class="plan-name">VIP شهر واحد</h3>
+          <p class="plan-desc">لتجربة باقة VIP الاحترافية لمدة شهر كامل.</p>
+          <div class="plan-price-box">
+            <span class="price-currency">ج.م</span>
+            <span class="price-val">100</span>
+            <span class="price-period">/ شهر</span>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>كل مميزات VIP الاحترافية</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>ربط الأجهزة المتعددة والموبايل</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>طباعة حرارية مباشرة وفواتير A4</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>إرسال فواتير واتساب للزبائن</span></div>
+          </div>
+          <button class="btn-plan btn-plan-cyan" type="button" onclick="openVipModalWithPlan('VIP شهر واحد (عرض البداية)', 100)">طلب تفعيل شهر (100 ج)</button>
+        </div>
+
+        <!-- 6 Months VIP (Popular) -->
+        <div class="pricing-card featured">
+          <div class="featured-badge">⭐ الأكثر طلباً</div>
+          <h3 class="plan-name" style="color: var(--gold-vip);">VIP 6 أشهر</h3>
+          <p class="plan-desc">الخيار المفضل لأغلب التجار مع توفير كبير واستقرار كامل.</p>
+          <div class="plan-price-box">
+            <span class="price-currency">ج.م</span>
+            <span class="price-val" style="color: var(--gold-vip);">500</span>
+            <span class="price-period">/ 6 أشهر</span>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feat-item"><i class="fa-solid fa-check" style="color: var(--gold-vip);"></i> <span>توفير 100 ج.م كاملة مقارنة بالشهري</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check" style="color: var(--gold-vip);"></i> <span>شارة التاج VIP الذهبية لمتجرك</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check" style="color: var(--gold-vip);"></i> <span>ربط غير محدود بين الكمبيوتر والهواتف</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check" style="color: var(--gold-vip);"></i> <span>دفتر الديون والأرباح وقسم الإيرادات</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check" style="color: var(--gold-vip);"></i> <span>دعم فني سريع عبر واتساب طوال المدة</span></div>
+          </div>
+          <button class="btn-plan btn-plan-gold" type="button" onclick="openVipModalWithPlan('VIP 6 أشهر (الأكثر طلباً)', 500)">طلب باقة 6 أشهر (500 ج)</button>
+        </div>
+
+        <!-- 1 Year VIP -->
+        <div class="pricing-card">
+          <div class="featured-badge" style="background: rgba(0, 230, 118, 0.2); border: 1px solid var(--green-online); color: var(--green-online);">وفر 300 ج.م</div>
+          <h3 class="plan-name">VIP سنة كاملة</h3>
+          <p class="plan-desc">راحة بال تامة لعام كامل مع أعلى نسبة توفير ممكنة.</p>
+          <div class="plan-price-box">
+            <span class="price-currency">ج.م</span>
+            <span class="price-val">900</span>
+            <span class="price-period">/ سنوياً</span>
+          </div>
+          <div class="plan-features">
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>توفير 300 ج.م (بدلاً من 1200 ج)</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>جميع مميزات البرنامج مفتوحة بالكامل</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>تحديثات مستمرة مجانية لعام كامل</span></div>
+            <div class="plan-feat-item"><i class="fa-solid fa-check"></i> <span>أولوية قصوى ومساعدة مباشرة</span></div>
+          </div>
+          <button class="btn-plan btn-plan-outline" type="button" onclick="openVipModalWithPlan('VIP سنة كاملة (وفر 300 ج)', 900)">طلب باقة السنة (900 ج)</button>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 24px;">
+        <span style="color: var(--text-muted); font-size: 0.95rem;">
+          ملاحظة: تتوفر أيضاً باقة <strong>3 أشهر بسعر 280 ج.م (توفير 20 ج)</strong> ويمكنك اختيارها مباشرة من نموذج التحويل.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. DOWNLOADS SECTION
+       ========================================== -->
+  <section class="downloads-section" id="downloads">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-download"></i> التحميل المباشر</span>
+        <h2 class="section-title">حمّل نسختك مجاناً <span class="gradient-text">وثبتها في ثواني</span></h2>
+        <p class="section-subtitle">الروابط وأرقام الإصدارات تتحدث تلقائياً فور نزول أي إصدار جديد من إدارة تاجر برو.</p>
+      </div>
+
+      <div class="downloads-grid">
+        <!-- PC Download Box -->
+        <div class="download-box">
+          <div>
+            <div class="download-top">
+              <div class="download-platform">
+                <div class="platform-icon">
+                  <i class="fa-brands fa-windows"></i>
+                </div>
+                <div>
+                  <div class="platform-name">برنامج الكمبيوتر (Windows)</div>
+                  <div class="platform-sub">يعمل على جميع أجهزة وإصدارات الويندوز</div>
+                </div>
+              </div>
+              <span class="version-chip pc-version-val">v1.0.0</span>
+            </div>
+
+            <div class="download-notes" id="pc-release-notes">
+              معالج تثبيت سهل وسريع: يدعم إدخال البضاعة بزر Enter بدون ماوس، كاشير وباركود متكامل، كشف النواقص الموحد، وقسم الإيرادات المستقل.
+            </div>
+          </div>
+
+          <a href="TAGER_PRO_Setup.exe" class="btn-download-main btn-download-pc" download>
+            <i class="fa-solid fa-download"></i>
+            <span>تحميل معالج التثبيت (TAGER_PRO_Setup.exe)</span>
+          </a>
+        </div>
+
+        <!-- Android Download Box -->
+        <div class="download-box">
+          <div>
+            <div class="download-top">
+              <div class="download-platform">
+                <div class="platform-icon android">
+                  <i class="fa-brands fa-android"></i>
+                </div>
+                <div>
+                  <div class="platform-name">تطبيق الأندرويد (Mobile)</div>
+                  <div class="platform-sub">ملف تثبيت مباشر (APK) لجميع الهواتف</div>
+                </div>
+              </div>
+              <span class="version-chip android-version-val" style="border-color: rgba(0, 230, 118, 0.4); color: var(--green-online);">v1.0.0</span>
+            </div>
+
+            <div class="download-notes" id="android-release-notes">
+              تطبيق أندرويد عملي وخفيف مرتبط مباشرة ببرنامج الكمبيوتر لمتابعة المبيعات وإصدار الفواتير وطباعة الباركود والإيصالات من الموبايل.
+            </div>
+          </div>
+
+          <a href="TAGER_PRO.apk" class="btn-download-main android-btn btn-download-android" download>
+            <i class="fa-brands fa-android"></i>
+            <span>تحميل تطبيق الأندرويد (TAGER_PRO.apk)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. CONTACT US & SUPPORT
+       ========================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-headset"></i> تواصل وخدمة العملاء</span>
+        <h2 class="section-title">تواصل معنا مباشرة <span class="gradient-text">في أي وقت</span></h2>
+        <p class="section-subtitle">لطلب التفعيل الفوري، الاستفسارات، أو المساعدة في تشغيل البرنامج على جهازك.</p>
+      </div>
+
+      <div class="contact-cards-grid">
+        <a href="https://wa.me/201152800730" target="_blank" class="contact-card">
+          <div class="contact-icon" style="color: #25D366; background: rgba(37, 211, 102, 0.12);">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div class="contact-info">
+            <h4>واتساب الدعم الفني والمبيعات</h4>
+            <p>01152800730</p>
+          </div>
+        </a>
+
+        <a href="tel:01152800730" class="contact-card">
+          <div class="contact-icon">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <div class="contact-info">
+            <h4>الاتصال الهاتفي المباشر</h4>
+            <p>01152800730</p>
+          </div>
+        </a>
+
+        <div class="contact-card">
+          <div class="contact-icon" style="color: var(--gold-vip); background: rgba(255, 215, 0, 0.12);">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+          </div>
+          <div class="contact-info">
+            <h4>تحويل فودافون كاش & InstaPay</h4>
+            <p>01152800730</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="assets/logo.png" alt="تاجر برو" style="width: 28px; height: 28px; border-radius: 8px;">
+        <span>جميع الحقوق محفوظة © 2026 <strong>تاجر برو - TAGER PRO</strong>.</span>
+      </div>
+      <div>
+        <span>برنامج إدارة المحلات والمخازن ونقاط البيع السريعة.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       10. AUTH MODAL (Login / Register / Profile)
+       ========================================== -->
+  <div class="modal-overlay" id="auth-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" type="button" onclick="closeAuthModal()" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-store"></i></div>
+        <h3 class="modal-title">حساب تاجر برو</h3>
+        <p class="modal-subtitle">حساب موحد يعمل بنفس البيانات على الموقع والكمبيوتر والموبايل</p>
+      </div>
+
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" type="button" id="tab-btn-login" onclick="switchAuthTab('login')">تسجيل الدخول</button>
+        <button class="modal-tab-btn" type="button" id="tab-btn-register" onclick="switchAuthTab('register')">حساب جديد</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="form-login">
+        <form id="form-login-element" onsubmit="return false;">
+          <div class="form-alert"></div>
+          <div class="form-group">
+            <label class="form-label" for="login-phone">رقم الهاتف (المسجل به)</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-phone"></i>
+              <input type="tel" id="login-phone" class="form-input" placeholder="01xxxxxxxxx" required dir="ltr">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="login-password">كلمة المرور</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit" id="btn-login-submit">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> دخول إلى الحساب
+          </button>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <div id="form-register" style="display: none;">
+        <form id="form-register-element" onsubmit="return false;">
+          <div class="form-alert"></div>
+          <div class="form-group">
+            <label class="form-label" for="reg-phone">رقم الهاتف (11 رقم يبدأ بـ 01)</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-phone"></i>
+              <input type="tel" id="reg-phone" class="form-input" placeholder="01012345678" maxlength="11" required dir="ltr">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-password">كلمة المرور (6 خانات أو أكثر)</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="reg-password" class="form-input" placeholder="أدخل كلمة مرور قوية" minlength="6" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-shopname">اسم المحل أو النشاط التجاري</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-shop"></i>
+              <input type="text" id="reg-shopname" class="form-input" placeholder="مثال: سوبر ماركت الأمانة" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-ownername">اسم صاحب المحل / المسؤول</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="reg-ownername" class="form-input" placeholder="مثال: الحاج أحمد" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-address">العنوان أو المنطقة</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" id="reg-address" class="form-input" placeholder="مثال: القاهرة - شبرا">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reg-type">نوع النشاط التجاري</label>
+            <div class="form-input-wrapper">
+              <i class="fa-solid fa-tag"></i>
+              <select id="reg-type" class="form-input" style="appearance: auto;">
+                <option value="سوبر ماركت وبقالة">سوبر ماركت وبقالة</option>
+                <option value="ملابس وأحذية">ملابس وأحذية</option>
+                <option value="موبايلات وإلكترونيات">موبايلات وإلكترونيات</option>
+                <option value="أدوات منزلية ومكتبات">أدوات منزلية ومكتبات</option>
+                <option value="عطور ومستحضرات تجميل">عطور ومستحضرات تجميل</option>
+                <option value="قطع غيار وصيانة">قطع غيار وصيانة</option>
+                <option value="تجارة عامة وجملة">تجارة عامة وجملة</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit" id="btn-register-submit">
+            <i class="fa-solid fa-user-plus"></i> إنشاء الحساب فوراً
+          </button>
+        </form>
+      </div>
+
+      <!-- Merchant Logged-in Profile View -->
+      <div id="merchant-profile-view" style="display: none; text-align: center;">
+        <div style="background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.25); border-radius: 16px; padding: 20px; margin-bottom: 20px;">
+          <h4 id="profile-shop-name" style="font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 4px;">متجري</h4>
+          <p id="profile-owner-name" style="color: var(--text-muted); font-size: 0.95rem;"></p>
+          <p id="profile-phone" style="color: var(--cyan-primary); font-weight: 700; direction: ltr; margin: 8px 0;"></p>
+          <span id="profile-vip-status" style="display: inline-block; padding: 4px 14px; border-radius: 999px; background: rgba(255, 215, 0, 0.15); font-weight: 800; font-size: 0.85rem;"></span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">
+          حسابك نشط الآن ويمكنك تسجيل الدخول به فوراً في برنامج الكمبيوتر وتطبيق الأندرويد.
+        </p>
+        <button class="btn-submit" style="background: rgba(255, 82, 82, 0.2); border: 1px solid #FF5252; color: #FF8A80; margin-bottom: 8px;" type="button" onclick="logoutMerchant()">
+          <i class="fa-solid fa-right-from-bracket"></i> تسجيل الخروج
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       11. VIP UPGRADE REQUEST MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="vip-request-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" type="button" onclick="closeVipModal()" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-header">
+        <div class="modal-icon" style="background: rgba(255, 215, 0, 0.15); color: var(--gold-vip);">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+        <h3 class="modal-title">طلب تفعيل باقة VIP</h3>
+        <p class="modal-subtitle" id="vip-plan-selected">VIP 6 أشهر (500 ج.م)</p>
+      </div>
+
+      <div style="background: rgba(255, 215, 0, 0.08); border: 1px dashed rgba(255, 215, 0, 0.4); border-radius: 12px; padding: 14px; margin-bottom: 20px; font-size: 0.88rem; color: #FFF8E1;">
+        <i class="fa-solid fa-circle-info" style="color: var(--gold-vip);"></i>
+        يرجى تحويل قيمة الباقة عبر <strong>فودافون كاش</strong> أو <strong>InstaPay</strong> على الرقم:
+        <div style="font-size: 1.35rem; font-weight: 900; color: var(--gold-vip); direction: ltr; text-align: center; margin-top: 6px;">
+          01152800730
+        </div>
+      </div>
+
+      <form id="vip-request-form" onsubmit="return false;">
+        <div class="form-group">
+          <label class="form-label" for="vip-duration-select">اختر الباقة والمدة المطلوبة:</label>
+          <div class="form-input-wrapper">
+            <i class="fa-solid fa-clock"></i>
+            <select id="vip-duration-select" class="form-input" style="appearance: auto;" onchange="onVipSelectChange(this)">
+              <option value="1|100">شهر واحد - 100 ج.م (عرض البداية)</option>
+              <option value="3|280">3 أشهر - 280 ج.م (وفر 20 ج)</option>
+              <option value="6|500" selected>6 أشهر - 500 ج.م (⭐ الأكثر طلباً)</option>
+              <option value="12|900">سنة كاملة - 900 ج.م (وفر 300 ج)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="vip-phone">رقم هاتف حسابك في تاجر برو</label>
+          <div class="form-input-wrapper">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="vip-phone" class="form-input" placeholder="01xxxxxxxxx" required dir="ltr">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="vip-name">اسم المحل / المسؤول</label>
+          <div class="form-input-wrapper">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="vip-name" class="form-input" placeholder="أدخل اسمك أو اسم المتجر" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="vip-transfer-phone">رقم الهاتف الذي حولت منه</label>
+          <div class="form-input-wrapper">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <input type="tel" id="vip-transfer-phone" class="form-input" placeholder="الرقم المحول منه المبلغ" required dir="ltr">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="vip-transfer-ref">اسم المحول أو ملاحظات (اختياري)</label>
+          <div class="form-input-wrapper">
+            <i class="fa-solid fa-receipt"></i>
+            <input type="text" id="vip-transfer-ref" class="form-input" placeholder="مثال: تحويل إنستاباي باسم فلان">
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btn-vip-submit" style="background: linear-gradient(135deg, #FFF275 0%, var(--gold-vip) 100%);">
+          <i class="fa-solid fa-paper-plane"></i> إرسال إشعار التحويل للإدارة وتفعيل الحساب
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       12. WEBSITE MAINTENANCE OVERLAY
+       ========================================== -->
+  <div class="maintenance-screen" id="website-maintenance-screen">
+    <div class="maintenance-box">
+      <div class="maint-icon">
+        <i class="fa-solid fa-wrench"></i>
+      </div>
+      <h2 class="maint-title">الموقع قيد التحديث والصيانة</h2>
+      <p class="maint-msg" id="maint-message-text">
+        نقوم حالياً ببعض أعمال الصيانة والتحسينات الدورية لنقدم لكم أفضل خدمة. سنعود للعمل قريباً جداً.
+      </p>
+      <div class="maint-time-chip">
+        <i class="fa-solid fa-clock"></i>
+        <span id="maint-endtime-text">قريباً جداً</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       13. FLOATING WHATSAPP BUTTON
+       ========================================== -->
+  <a href="https://wa.me/201152800730" target="_blank" class="floating-whatsapp" title="تواصل معنا عبر واتساب">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Firebase Scripts (Compat v9) WITH AUTH -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- Main Web App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
